@@ -1,3 +1,9 @@
-const rect = require("./rectangle");
+const { circleFunc } = require("./circle");
 
-console.log("Area", rect.area(1, 2), "Perimeter", rect.perimeter(1, 2));
+circleFunc(-1, (err, out) => {
+  if (err) {
+    console.log(err.message);
+  } else {
+    console.log("area : ", out.area(), "perimeter ", out.perimeter());
+  }
+});
